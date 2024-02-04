@@ -13,6 +13,9 @@ import { moveFile } from './file_op/moveFile.js';
 //import all created functions for OS info
 import { getOSInfo } from './os_info/getOSInfo.js';
 
+//import all created functions for nwd
+import { listContent } from './nwd/listContent.js';
+
 const readline = readlinePromises.createInterface({
     input: process.stdin,
     output: process.stdout,
