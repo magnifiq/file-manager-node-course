@@ -7,6 +7,7 @@ import { copyFile } from './file_op/copyFile.js';
 import { createFile } from './file_op/createFile.js';
 import { renameFile } from './file_op/renameFile.js';
 import { readFileOper } from './file_op/readFileOper.js';
+import { removeFile } from './file_op/removeFile.js';
 
 const readline = readlinePromises.createInterface({
     input: process.stdin,
