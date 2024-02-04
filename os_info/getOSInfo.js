@@ -1,6 +1,7 @@
 import { cpus } from 'node:os';
 import { EOL } from 'os';
 import { arch } from 'os';
+import { userInfo } from 'os';
 
 const getCPUDetails = () => {
     const cpuArr = cpus();
@@ -16,6 +17,15 @@ const getEOL=()=> {
 
 const getCPUArch = () => {
     console.log('CPU architecture:', arch());
+}
+
+const getUsername=()=>{
+    try {
+        console.log('Username: ', userInfo().username);
+    }
+    catch (error) {
+        console.log('Invalid input');
+    }
 }
 
 export const getOSInfo=(arg) => {
