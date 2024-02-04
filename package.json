@@ -1,4 +1,9 @@
 {
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
   "devDependencies": {
     "eslint": "^8.56.0"
   }
