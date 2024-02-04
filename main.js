@@ -5,6 +5,7 @@ import process from 'node:process';
 //import all created functions
 import { copyFile } from './file_op/copyFile.js';
 import { createFile } from './file_op/createFile.js';
+import { renameFile } from './file_op/renameFile.js';
 
 const readline = readlinePromises.createInterface({
     input: process.stdin,
