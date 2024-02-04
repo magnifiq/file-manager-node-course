@@ -10,6 +10,9 @@ import { readFileOper } from './file_op/readFileOper.js';
 import { removeFile } from './file_op/removeFile.js';
 import { moveFile } from './file_op/moveFile.js';
 
+//import all created functions for OS info
+import { getOSInfo } from './os_info/getOSInfo.js';
+
 const readline = readlinePromises.createInterface({
     input: process.stdin,
     output: process.stdout,
