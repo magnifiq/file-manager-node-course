@@ -1,4 +1,5 @@
 import { cpus } from 'node:os';
+import { EOL } from 'os';
 import { arch } from 'os';
 
 const getCPUDetails = () => {
@@ -7,6 +8,10 @@ const getCPUDetails = () => {
     cpuArr.forEach((cpu, index) => {
         console.log('Num: ', index + 1, 'model: ', cpu.model, ' clock rate: ', cpu.speed, 'GHz');
     });
+}
+
+const getEOL=()=> {
+    console.log('EOL: ', EOL === '\n' ? '\\n' : '\\r\\n');
 }
 
 const getCPUArch = () => {
