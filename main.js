@@ -2,12 +2,13 @@ import readlinePromises from 'node:readline/promises';
 import os from 'os';
 import process from 'node:process';
 
-//import all created functions
+//import all created functions for file operations
 import { copyFile } from './file_op/copyFile.js';
 import { createFile } from './file_op/createFile.js';
 import { renameFile } from './file_op/renameFile.js';
 import { readFileOper } from './file_op/readFileOper.js';
 import { removeFile } from './file_op/removeFile.js';
+import { moveFile } from './file_op/moveFile.js';
 
 const readline = readlinePromises.createInterface({
     input: process.stdin,
