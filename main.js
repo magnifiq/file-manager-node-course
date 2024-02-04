@@ -6,6 +6,7 @@ import process from 'node:process';
 import { copyFile } from './file_op/copyFile.js';
 import { createFile } from './file_op/createFile.js';
 import { renameFile } from './file_op/renameFile.js';
+import { readFileOper } from './file_op/readFileOper.js';
 
 const readline = readlinePromises.createInterface({
     input: process.stdin,
@@ -85,7 +86,7 @@ async function switchCommands(inputData) {
                 break;
             }
             else {
-                await readFile(firstArg);
+                await readFileOper(firstArg);
             }
             break;
         case 'add':
