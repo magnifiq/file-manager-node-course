@@ -2,6 +2,9 @@ import readlinePromises from 'node:readline/promises';
 import os from 'os';
 import process from 'node:process';
 
+//import all created functions
+import { copyFile } from './file_op/copyFile.js';
+
 const readline = readlinePromises.createInterface({
     input: process.stdin,
     output: process.stdout,
