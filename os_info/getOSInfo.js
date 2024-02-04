@@ -1,6 +1,7 @@
 import { cpus } from 'node:os';
 import { EOL } from 'os';
 import { arch } from 'os';
+import { homedir } from 'os';
 import { userInfo } from 'os';
 
 const getCPUDetails = () => {
@@ -11,7 +12,7 @@ const getCPUDetails = () => {
     });
 }
 
-const getEOL=()=> {
+const getEOL = () => {
     console.log('EOL: ', EOL === '\n' ? '\\n' : '\\r\\n');
 }
 
@@ -19,7 +20,7 @@ const getCPUArch = () => {
     console.log('CPU architecture:', arch());
 }
 
-const getUsername=()=>{
+const getUsername = () => {
     try {
         console.log('Username: ', userInfo().username);
     }
@@ -27,8 +28,16 @@ const getUsername=()=>{
         console.log('Invalid input');
     }
 }
+const getHomedir = () => {
+    try {
+        console.log('Homedir: ', homedir());
+    }
+    catch (error) {
+        console.log('Invalid input');
+    }
+}
 
-export const getOSInfo=(arg) => {
+export const getOSInfo = (arg) => {
     switch (arg) {
         case '--cpus':
             getCPUDetails();
