@@ -16,6 +16,11 @@ import { getOSInfo } from './os_info/getOSInfo.js';
 //import all created functions for nwd
 import { listContent } from './nwd/listContent.js';
 
+//import all created functions for nwd
+import { listContent } from './nwd/listContent.js';
+import { goDown } from './nwd/goDown.js';
+import { goUp } from './nwd/goUp.js';
+
 const readline = readlinePromises.createInterface({
     input: process.stdin,
     output: process.stdout,
