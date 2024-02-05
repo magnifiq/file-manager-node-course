@@ -15,11 +15,11 @@ import { getOSInfo } from './os_info/getOSInfo.js';
 
 //import all created functions for nwd
 import { listContent } from './nwd/listContent.js';
-
-//import all created functions for nwd
-import { listContent } from './nwd/listContent.js';
 import { goDown } from './nwd/goDown.js';
 import { goUp } from './nwd/goUp.js';
+
+//import a created function for hash
+import { hashOper } from './hashOper.js';
 
 const readline = readlinePromises.createInterface({
     input: process.stdin,
@@ -162,7 +162,7 @@ async function switchCommands(inputData) {
                 break;
             }
             else {
-                await hashContent(firstArg);
+                await hashOper(firstArg);
             }
             break;
         case 'compress':
