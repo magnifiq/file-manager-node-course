@@ -21,6 +21,10 @@ import { goUp } from './nwd/goUp.js';
 //import a created function for hash
 import { hashOper } from './hashOper.js';
 
+//import all created functions for compression and decompression
+import { compressOper } from './compression_decompression/compressOper.js';
+import { decompressOper } from './compression_decompression/decompressOper.js';
+
 const readline = readlinePromises.createInterface({
     input: process.stdin,
     output: process.stdout,
@@ -171,7 +175,7 @@ async function switchCommands(inputData) {
                 break;
             }
             else {
-                await compressContent(firstArg, secondArg);
+                await compressOper(firstArg, secondArg);
             }
             break;
         case 'decompress':
@@ -180,7 +184,7 @@ async function switchCommands(inputData) {
                 break;
             }
             else {
-                await decompressContent(firstArg, secondArg);
+                await decompressOper(firstArg, secondArg);
             }
             break;
         case '.exit':
